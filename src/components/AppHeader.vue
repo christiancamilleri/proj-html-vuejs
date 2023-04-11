@@ -1,5 +1,6 @@
 <script>
 import NavBar from './NavBar.vue';
+import jumbo from './jumbo.vue';
 
 import { store } from '../store.js'
 
@@ -12,6 +13,7 @@ export default {
     },
     components: {
         NavBar,
+        jumbo,
     }
 }
 </script>
@@ -19,6 +21,7 @@ export default {
 <template>
     <div>
         <NavBar></NavBar>
+        <jumbo></jumbo>
     </div>
 </template>
 
