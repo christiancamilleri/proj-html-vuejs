@@ -10,9 +10,8 @@ export default {
 </script>
 
 <template>
-    <hr>
     <div>
-        prova main
+
     </div>
 </template>
 

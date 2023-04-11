@@ -11,9 +11,8 @@ export default {
 </script>
 
 <template>
-    <hr>
     <div>
-        prova footer
+
     </div>
 </template>
 
