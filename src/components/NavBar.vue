@@ -167,6 +167,7 @@ nav {
                     width: 120px;
 
                     border-bottom: 2px solid #20AD96;
+                    z-index: 2;
 
 
                     li {
