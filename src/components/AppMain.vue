@@ -1,6 +1,7 @@
 <script>
 import CardItem from './CardItem.vue';
 import ProgramItem from './ProgramItem.vue';
+import CompanionItem from './CompanionItem.vue';
 
 import { store } from '../store.js';
 
@@ -73,32 +74,36 @@ export default {
     components: {
         CardItem,
         ProgramItem,
+        CompanionItem,
     }
 }
 </script>
 
 <template>
     <main>
-        <!-- card section -->
+        <section>
+            <!-- card section -->
+            <div class="container">
+                <div class="title">
+                    <small>
+                        STIMULATED TO LEARN?
+                    </small>
+                    <h2>
+                        Feautured Online Courses
+                    </h2>
+                </div>
+                <div id="card-container">
+
+                    <CardItem v-for="card in cards" :card="card"></CardItem>
+
+                </div>
+                <div id="btn">
+                    <button><b>View All Courses</b> <i class="fa-solid fa-arrow-right"></i> </button>
+                </div>
+                <!-- /card section -->
+            </div>
+        </section>
         <div class="container">
-            <div class="title">
-                <small>
-                    STIMULATED TO LEARN?
-                </small>
-                <h2>
-                    Feautured Online Courses
-                </h2>
-            </div>
-            <div id="card-container">
-
-                <CardItem v-for="card in cards" :card="card"></CardItem>
-
-            </div>
-            <div id="btn">
-                <button><b>View All Courses</b> <i class="fa-solid fa-arrow-right"></i> </button>
-            </div>
-            <!-- /card section -->
-
             <!-- program section -->
             <div class="title">
                 <small>
@@ -112,15 +117,63 @@ export default {
                 <ProgramItem v-for="programItem in ProgramItems" :item="programItem"></ProgramItem>
             </div>
             <!-- /program section -->
+
+            <!-- companion section -->
+            <CompanionItem></CompanionItem>
+            <!-- /companion section -->
+
         </div>
+
     </main>
 </template>
 
 <style lang="scss" scoped>
 main {
-    background-color: #f5f7fa;
-    margin-top: 5em;
+    section {
+        background-color: #f5f7fa;
+        margin-top: 5em;
+        padding-bottom: 5em;
 
+
+
+        #card-container {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+
+            gap: 2em;
+
+            max-height: 500px;
+        }
+
+        #btn {
+            text-align: center;
+            margin-top: 2em;
+
+            button {
+                padding: 20px 40px;
+
+                max-width: 60%;
+
+                margin: 1em 0;
+
+                border: none;
+
+                color: white;
+
+                border-radius: 8px;
+                background-color: #20AD96;
+
+                cursor: pointer;
+
+            }
+
+            button:hover {
+                background-color: #3F3A64;
+            }
+        }
+
+    }
 
     .title {
         text-align: center;
@@ -140,42 +193,7 @@ main {
         }
     }
 
-    #card-container {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
 
-        gap: 2em;
-
-        max-height: 500px;
-    }
-
-    #btn {
-        text-align: center;
-        margin-top: 2em;
-
-        button {
-            padding: 20px 40px;
-
-            max-width: 60%;
-
-            margin: 1em 0;
-
-            border: none;
-
-            color: white;
-
-            border-radius: 8px;
-            background-color: #20AD96;
-
-            cursor: pointer;
-
-        }
-
-        button:hover {
-            background-color: #3F3A64;
-        }
-    }
 
     #program-item-container {
         display: flex;
