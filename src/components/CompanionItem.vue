@@ -11,35 +11,39 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div id="img-container">
-            <img id="main-img" src="/images/home-2-popup-video-poster.jpg" alt="">
-            <img id="yt-btn" src="/images/icon-youtube-play.png" alt="">
-            <img id="path1" src="/images/maxcoach-shape-07-150x150.png" alt="">
-            <img id="path2" src="/images/maxcoach-shape-05.png" alt="">
-            <img id="path3" src="/images/path3.png" alt="">
-        </div>
+    <div id="back">
 
-        <div id="text-container">
-            <i id="circle" class="fa-regular fa-circle"></i>
-            <small>
-                <span>GET STARTED</span> <b>EFFORTLESSY</b>
-            </small>
+        <div class="container">
+            <div id="img-container">
+                <img id="main-img" src="/images/home-2-popup-video-poster.jpg" alt="">
+                <img id="yt-btn" src="/images/icon-youtube-play.png" alt="">
+                <img id="path1" src="/images/maxcoach-shape-07-150x150.png" alt="">
+                <img id="path2" src="/images/maxcoach-shape-05.png" alt="">
+                <img id="path3" src="/images/path3.png" alt="">
+            </div>
 
-            <h2>
-                Enjoy Our
-                <br>
-                <span>Companionship</span>
-            </h2>
-            <p>
+            <div id="text-container">
+                <i id="circle" class="fa-regular fa-circle"></i>
                 <small>
-                    Sneek peek into what has in store for you on our online teaching and mentoring portal.Seek for some
-                    hidden
-                    hints of early-bird rewards as well.
+                    <span>GET STARTED</span> <b>EFFORTLESSY</b>
                 </small>
-            </p>
 
-            <a href="#">Download free guidebook <i class="fa-solid fa-arrow-right"></i></a>
+                <h2>
+                    Enjoy Our
+                    <br>
+                    <span>Companionship</span>
+                </h2>
+                <p>
+                    <small>
+                        Sneek peek into what has in store for you on our online teaching and mentoring portal.Seek for some
+                        hidden
+                        hints of early-bird rewards as well.
+                    </small>
+                </p>
+
+                <a href="#">Download free guidebook <i class="fa-solid fa-arrow-right"></i></a>
+
+            </div>
 
         </div>
 
@@ -47,94 +51,112 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
+#back {
 
-    margin-top: 200px;
+    background-color: white;
 
-    #img-container {
-        width: 60%;
+    border-radius: 0 0 400px 0;
 
-        position: relative;
 
-        #main-img {
-            width: 100%;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+
+        margin-top: 200px;
+        padding-bottom: 5em;
+
+
+
+        border-radius: 0 0 0 30px;
+
+        #img-container {
+            width: 60%;
+
+            position: relative;
+
+            #main-img {
+                width: 100%;
+                position: absolute;
+                top: -10%;
+
+                z-index: 5;
+
+            }
+
+            #yt-btn {
+                position: absolute;
+                top: 44%;
+                right: 40%
+            }
+
+            #path1 {
+                position: absolute;
+                bottom: -20%;
+                left: 76%;
+
+            }
+
+            #path2 {
+                position: absolute;
+                top: 12%;
+                left: -14%;
+
+                z-index: 1;
+
+            }
+
+            #path3 {
+                position: absolute;
+                top: -20%;
+                left: -11%;
+
+                width: 250px;
+                height: 300px;
+            }
 
         }
 
-        #yt-btn {
-            position: absolute;
-            top: 44%;
-            right: 40%
-        }
+        #text-container {
+            width: 40%;
+            padding: 2em 1em;
 
-        #path1 {
-            position: absolute;
-            bottom: -20%;
-            left: 76%;
-            z-index: -1;
-        }
+            position: relative;
 
-        #path2 {
-            position: absolute;
-            top: 12%;
-            left: -14%;
-            z-index: -1;
-        }
+            #circle {
+                position: absolute;
+                top: -7%;
+                left: -2%;
+                font-size: 3em;
 
-        #path3 {
-            position: absolute;
-            top: -13%;
-            left: -11%;
+                color: #ecc5ab;
+            }
 
-            width: 250px;
-            height: 300px;
-            z-index: -2;
-        }
+            small {
+                span {
+                    opacity: .4;
+                }
+            }
 
-    }
+            h2 {
+                font-size: 2em;
 
-    #text-container {
-        width: 40%;
-        padding: 2em 1em;
+                span {
 
-        position: relative;
+                    color: #20AD96;
+                }
+            }
 
-        #circle {
-            position: absolute;
-            top: -7%;
-            left: -2%;
-            font-size: 3em;
-
-            color: #ecc5ab;
-        }
-
-        small {
-            span {
+            p {
                 opacity: .4;
             }
-        }
 
-        h2 {
-            font-size: 2em;
-
-            span {
-
+            a {
                 color: #20AD96;
+                text-decoration: underline;
+
+                font-size: .8em;
             }
-        }
-
-        p {
-            opacity: .4;
-        }
-
-        a {
-            color: #20AD96;
-            text-decoration: underline;
-
-            font-size: .8em;
         }
     }
 }

@@ -2,6 +2,7 @@
 import CardItem from './CardItem.vue';
 import ProgramItem from './ProgramItem.vue';
 import CompanionItem from './CompanionItem.vue';
+import SliderCards from './SliderCards.vue';
 
 import { store } from '../store.js';
 
@@ -75,6 +76,7 @@ export default {
         CardItem,
         ProgramItem,
         CompanionItem,
+        SliderCards,
     }
 }
 </script>
@@ -118,9 +120,14 @@ export default {
             </div>
             <!-- /program section -->
 
+        </div>
+
+        <div id="background">
             <!-- companion section -->
             <CompanionItem></CompanionItem>
             <!-- /companion section -->
+            <!-- slider cards section -->
+            <SliderCards></SliderCards>
 
         </div>
 
@@ -199,6 +206,10 @@ main {
         display: flex;
         justify-content: space-between;
         margin-top: 4em;
+    }
+
+    #background {
+        background-color: #f7f7f7;
     }
 
 
