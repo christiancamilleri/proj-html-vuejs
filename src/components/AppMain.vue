@@ -1,5 +1,6 @@
 <script>
 import CardItem from './CardItem.vue';
+import ProgramItem from './ProgramItem.vue';
 
 import { store } from '../store.js';
 
@@ -11,19 +12,19 @@ export default {
             cards: [
                 {
                     img: "course-02-480x298.jpg",
-                    price: "$40.00",
+                    price: "$40.oo",
                     description: "Learning to Write as a Professional Author",
                     details: "20 lessons 50 students"
                 },
                 {
                     img: "stock-full-hd-04-480x298.jpg",
-                    price: "$19.00",
+                    price: "$19.oo",
                     description: "Open Programming Courses for Everyone: Python",
                     details: "17 lessons 62 students"
                 },
                 {
                     img: "course-featured-image-01-480x298.jpg",
-                    price: "$40.00",
+                    price: "$40.oo",
                     description: "Master jQuery in a Short Period of Time",
                     details: "6 lessons 51 students"
                 },
@@ -35,31 +36,52 @@ export default {
                 },
                 {
                     img: "stock-full-hd-06-480x298.jpg",
-                    price: "$26.00",
+                    price: "$26.oo",
                     description: "Academic Listening and Note-taking",
                     details: "14 lessons 67 students"
                 },
                 {
                     img: "stock-full-hd-05-480x298.jpg",
-                    price: "$59.00",
+                    price: "$59.oo",
                     description: "Introduction to Javascript for Beginners",
                     details: "14 lessons 76 students"
                 },
 
+            ],
+            ProgramItems: [
+                {
+                    img: "home-2-image-box-01.png",
+                    title: "Customize Preferences",
+                    description: "Learners are given the right to arrange and customize their study schedule and timetable based on preferences",
+                    action: "Start here"
+                },
+                {
+                    img: "about-us-02-image-box-02.png",
+                    title: "Cloud Storage",
+                    description: "You can store online lessons via online cloud or download to your device and revise lessons on the way.",
+                    action: "Get free quote"
+                },
+                {
+                    img: "home-2-image-box-03.png",
+                    title: "Multimedia Channels",
+                    description: "We provide study materials with varios formats:video, audio, slides, doc, prints,books and applications.",
+                    action: "Start now"
+                },
             ]
         }
     },
     components: {
         CardItem,
+        ProgramItem,
     }
 }
 </script>
 
 <template>
     <main>
-
+        <!-- card section -->
         <div class="container">
-            <div id="title">
+            <div class="title">
                 <small>
                     STIMULATED TO LEARN?
                 </small>
@@ -75,6 +97,21 @@ export default {
             <div id="btn">
                 <button><b>View All Courses</b> <i class="fa-solid fa-arrow-right"></i> </button>
             </div>
+            <!-- /card section -->
+
+            <!-- program section -->
+            <div class="title">
+                <small>
+                    MAXCOACH AVAILABLE COURSES
+                </small>
+                <h2>
+                    Access <span>Smart Tutoring</span> Program For Benefits.
+                </h2>
+            </div>
+            <div id="program-item-container">
+                <ProgramItem v-for="programItem in ProgramItems" :item="programItem"></ProgramItem>
+            </div>
+            <!-- /program section -->
         </div>
     </main>
 </template>
@@ -84,7 +121,8 @@ main {
     background-color: #f5f7fa;
     margin-top: 5em;
 
-    #title {
+
+    .title {
         text-align: center;
         padding-top: 5em;
 
@@ -94,6 +132,11 @@ main {
 
         h2 {
             margin-top: 0;
+
+            span {
+                color: #20AD96;
+
+            }
         }
     }
 
@@ -132,6 +175,12 @@ main {
         button:hover {
             background-color: #3F3A64;
         }
+    }
+
+    #program-item-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4em;
     }
 
 
