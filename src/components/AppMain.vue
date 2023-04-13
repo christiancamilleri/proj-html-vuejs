@@ -247,9 +247,8 @@ main {
         display: flex;
     }
 
-    .statistic:last-child {
+    .item:last-child {
         border-right: 1px solid #f1ebe5;
-        ;
     }
 
 }

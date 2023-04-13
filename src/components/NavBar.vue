@@ -160,7 +160,7 @@ nav {
 
                 #drop-down-menu {
                     position: absolute;
-                    top: 120%;
+                    top: 110%;
                     left: 0;
                     display: none;
 
@@ -177,15 +177,24 @@ nav {
                         color: #4c4c4c;
 
                     }
+
+                    li:hover {
+                        border-bottom: 1px solid #20AD96;
+                    }
                 }
             }
         }
 
-        .links:hover {
+        .links a:hover {
             color: #20AD96;
+
+        }
+
+        .links:hover {
 
             border-bottom: 2px solid #20AD96;
         }
+
 
         li:hover #drop-down-menu {
             display: flex;

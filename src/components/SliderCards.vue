@@ -1,11 +1,12 @@
 <script>
 import { store } from '../store.js';
 
+import SliderCardItem from './SliderCardItem.vue';
+
 export default {
     data() {
         return {
             store,
-            activeIndex: 0,
             cards: [
                 {
                     title: "High level of efficiency and scientific teaching methods",
@@ -31,23 +32,41 @@ export default {
                 {
                     title: "It's a choice of quality for people with special needs",
                     description: "I m a very strict person so i require everything to be organized and neat.Then, i'll be able to make things right and shine.MaxCoach guys just got me",
-                    img: "testimonial-avata-03.jpg",
+                    img: "testimonial-avata-01.jpg",
                     name: "FLORENCE THEMES",
                     work: "/ MULTIMEDIA ADMIN"
                 },
 
-            ]
+            ],
+            activeIndex: 0,
+            activeLess: 3,
+            activePlus: 1,
         }
     },
     methods: {
         ChangeSlide(index) {
             this.activeIndex = index
 
-            // document.querySelector(".card").scrollBy({
-            //     left: 600,
-            //     behavior: "smooth"
-            // })
+            this.slideDisplay()
+        },
+        slideDisplay() {
+            if (this.activeIndex == 0) {
+                this.activeLess = this.cards.length - 1;
+                this.activePlus = this.activeIndex + 1;
+            } else if (this.activeIndex == this.cards.length - 1) {
+                this.activeLess = this.activeIndex - 1;
+                this.activePlus = 0
+            } else {
+                this.activeLess = this.activeIndex - 1;
+                this.activePlus = this.activeIndex + 1
+            }
         }
+    },
+    components: {
+        SliderCardItem,
+    },
+    mounted() {
+        this.slideDisplay()
     }
 }
 </script>
@@ -65,34 +84,12 @@ export default {
     <!-- /titolo iniziale -->
 
     <!-- cards -->
-    <div id="card-container">
-        <transition-group>
+    <div class="card-container">
 
-            <div class="card" v-for="(card, index) in cards" :key="index"
-                :class="this.activeIndex == index ? `active` : `inactive`" @click="ChangeSlide(index)">
-                <p id="title">
-                    <b>{{ card.title }}</b>
-                </p>
-                <p id="description">
-                    {{ card.description }}
-                </p>
-                <div id="card-bottom">
-                    <img :src="`/images/${card.img}`" alt="">
+        <SliderCardItem @click="ChangeSlide(activeLess)" :card="cards[activeLess]" class="inactive"></SliderCardItem>
+        <SliderCardItem :card="cards[activeIndex]" class="active"></SliderCardItem>
+        <SliderCardItem @click="ChangeSlide(activePlus)" :card="cards[activePlus]" class="inactive"></SliderCardItem>
 
-                    <div>
-
-                        <span>
-                            <b>{{ card.name }}</b>
-                        </span>
-
-                        <div id="work">
-                            {{ card.work }}
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </transition-group>
     </div>
     <!-- /cards -->
 
@@ -139,9 +136,8 @@ export default {
     }
 }
 
-#card-container {
+.card-container {
     display: flex;
-    justify-content: space-between;
 
     margin-top: 3em;
 
@@ -151,43 +147,11 @@ export default {
 
     background-color: #f7f7f7;
 
-    .card {
 
-        padding: 2em;
+    height: 100%;
+    width: 100%;
 
-        background-color: white;
-
-
-
-
-        #description {
-            opacity: .7;
-        }
-
-        #card-bottom {
-            display: flex;
-            align-items: center;
-            gap: .5em;
-
-            img {
-                height: 60px;
-                width: 60px;
-
-                border-radius: 50%;
-            }
-
-            div {
-
-                #work {
-                    font-size: .5;
-
-                    opacity: .4;
-                }
-            }
-
-        }
-
-    }
+    overflow: scroll;
 
 }
 
@@ -223,6 +187,8 @@ export default {
     align-items: center;
 
     margin-top: 4em;
+
+    padding-bottom: 3em;
 
     position: relative;
 

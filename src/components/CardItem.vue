@@ -66,6 +66,12 @@ export default {
             padding: .8em 0;
         }
 
+        .description:hover {
+            color: #20AD96;
+
+            cursor: pointer;
+        }
+
         .details {
             opacity: .5;
             font-size: .6em;
