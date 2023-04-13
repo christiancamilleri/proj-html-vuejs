@@ -24,7 +24,12 @@ export default {
                 {{ card.description }}
             </div>
             <div class="details">
-                {{ card.details }}
+                <span>
+                    <i class="fa-regular fa-file"></i> {{ card.details1 }}
+                </span>
+                <span>
+                    <i class="fa-regular fa-user"></i> {{ card.details2 }}
+                </span>
             </div>
         </div>
 
@@ -64,6 +69,9 @@ export default {
         .details {
             opacity: .5;
             font-size: .6em;
+
+            display: flex;
+            gap: 10px;
         }
     }
 }

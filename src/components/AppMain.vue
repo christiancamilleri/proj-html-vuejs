@@ -19,37 +19,43 @@ export default {
                     img: "course-02-480x298.jpg",
                     price: "$40.oo",
                     description: "Learning to Write as a Professional Author",
-                    details: "20 lessons 50 students"
+                    details1: "20 lessons",
+                    details2: "50 students"
                 },
                 {
                     img: "stock-full-hd-04-480x298.jpg",
                     price: "$19.oo",
                     description: "Open Programming Courses for Everyone: Python",
-                    details: "17 lessons 62 students"
+                    details1: "17 lessons",
+                    details2: "62 students"
                 },
                 {
                     img: "course-featured-image-01-480x298.jpg",
                     price: "$40.oo",
                     description: "Master jQuery in a Short Period of Time",
-                    details: "6 lessons 51 students"
+                    details1: "6 lessons",
+                    details2: "51 students"
                 },
                 {
                     img: "stock-full-hd-03-480x298.jpg",
                     price: "FREE",
                     description: "Customer Centric Info-Tech Strategies",
-                    details: "24 lessons 769 students"
+                    details1: "24 lessons",
+                    details2: "769 students"
                 },
                 {
                     img: "stock-full-hd-06-480x298.jpg",
                     price: "$26.oo",
                     description: "Academic Listening and Note-taking",
-                    details: "14 lessons 67 students"
+                    details1: "14 lessons",
+                    details2: "67 students"
                 },
                 {
                     img: "stock-full-hd-05-480x298.jpg",
                     price: "$59.oo",
                     description: "Introduction to Javascript for Beginners",
-                    details: "14 lessons 76 students"
+                    details1: "14 lessons",
+                    details2: "76 students"
                 },
 
             ],
