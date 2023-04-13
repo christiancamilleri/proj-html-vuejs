@@ -21,7 +21,7 @@ export default {
             <b>{{ item.number }}</b>
         </span>
         <small>
-            {{ item.students }}
+            {{ item.student }}
         </small>
     </div>
 </template>
