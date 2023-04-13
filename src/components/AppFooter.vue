@@ -85,6 +85,10 @@ export default {
             <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
         </button>
 
+        <div class="footer-bottom">
+            <span>© 2020 Maxcoach. All Right Reserved</span>
+        </div>
+
     </footer>
 </template>
 
@@ -156,4 +160,16 @@ footer {
         bottom: 0;
         right: 0;
     }
-}</style>
+
+    .footer-bottom {
+        display: flex;
+        justify-content: center;
+
+        opacity: .4;
+
+        padding-bottom: 2em;
+
+        font-size: .8em;
+    }
+}
+</style>

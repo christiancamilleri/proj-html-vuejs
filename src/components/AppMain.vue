@@ -7,7 +7,7 @@ import StatisticsItem from './StatisticsItem.vue';
 import BlogsSection from './BlogsSection.vue';
 import NewsletterSection from './NewsletterSection.vue';
 
-import { store } from '../store.js';
+import { store } from '../store.js'
 
 
 export default {
@@ -164,6 +164,7 @@ export default {
             <!-- slider cards section -->
             <SliderCards></SliderCards>
             <!-- /slider cards section -->
+
         </div>
         <!-- statistic section -->
         <div class="container statistic">
@@ -180,8 +181,6 @@ export default {
         <!-- newsletter section -->
         <NewsletterSection></NewsletterSection>
         <!-- /newsletter section -->
-
-
 
     </main>
 </template>
