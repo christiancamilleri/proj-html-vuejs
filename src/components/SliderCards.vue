@@ -5,7 +5,7 @@ export default {
     data() {
         return {
             store,
-            activeIndex: 1,
+            activeIndex: 0,
             cards: [
                 {
                     title: "High level of efficiency and scientific teaching methods",
@@ -28,6 +28,13 @@ export default {
                     name: "FLORENCE THEMES",
                     work: "/ MULTIMEDIA ADMIN"
                 },
+                {
+                    title: "It's a choice of quality for people with special needs",
+                    description: "I m a very strict person so i require everything to be organized and neat.Then, i'll be able to make things right and shine.MaxCoach guys just got me",
+                    img: "testimonial-avata-03.jpg",
+                    name: "FLORENCE THEMES",
+                    work: "/ MULTIMEDIA ADMIN"
+                },
 
             ]
         }
@@ -35,6 +42,11 @@ export default {
     methods: {
         ChangeSlide(index) {
             this.activeIndex = index
+
+            // document.querySelector(".card").scrollBy({
+            //     left: 600,
+            //     behavior: "smooth"
+            // })
         }
     }
 }
@@ -56,7 +68,7 @@ export default {
     <div id="card-container">
         <transition-group>
 
-            <div id="card" v-for="(card, index) in cards" :key="index"
+            <div class="card" v-for="(card, index) in cards" :key="index"
                 :class="this.activeIndex == index ? `active` : `inactive`" @click="ChangeSlide(index)">
                 <p id="title">
                     <b>{{ card.title }}</b>
@@ -139,10 +151,7 @@ export default {
 
     background-color: #f7f7f7;
 
-
-
-    #card {
-        width: calc(100% / 3 - 2em / 3 - 2);
+    .card {
 
         padding: 2em;
 
@@ -229,23 +238,7 @@ export default {
         margin-top: 0;
     }
 
-    button {
-        padding: 10px 20px;
 
-        max-width: 60%;
-
-        margin: 1em 0;
-
-        border: none;
-
-        color: white;
-        background-color: #20AD96;
-    }
-
-    button:hover {
-        background-color: #3F3A64;
-        cursor: pointer;
-    }
 
     #path1 {
         position: absolute;

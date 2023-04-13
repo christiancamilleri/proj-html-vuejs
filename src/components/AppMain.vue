@@ -3,6 +3,7 @@ import CardItem from './CardItem.vue';
 import ProgramItem from './ProgramItem.vue';
 import CompanionItem from './CompanionItem.vue';
 import SliderCards from './SliderCards.vue';
+import StatisticsItem from './StatisticsItem.vue';
 
 import { store } from '../store.js';
 
@@ -69,6 +70,28 @@ export default {
                     description: "We provide study materials with varios formats:video, audio, slides, doc, prints,books and applications.",
                     action: "Start now"
                 },
+            ],
+            statisticItems: [
+                {
+                    title: "Successfully trained",
+                    number: "1790",
+                    student: "ENROLLED LEARNERS"
+                },
+                {
+                    title: "Proudly Received",
+                    number: "19",
+                    student: "COUNTRYWIDE AWARDS"
+                },
+                {
+                    title: "Firmly Established",
+                    number: "24",
+                    student: "LOCAL BRANCHES"
+                },
+                {
+                    title: "Getting Feautured On",
+                    number: "1090",
+                    student: "BLOG POSTS"
+                },
             ]
         }
     },
@@ -77,6 +100,7 @@ export default {
         ProgramItem,
         CompanionItem,
         SliderCards,
+        StatisticsItem,
     }
 }
 </script>
@@ -126,10 +150,18 @@ export default {
             <!-- companion section -->
             <CompanionItem></CompanionItem>
             <!-- /companion section -->
+
             <!-- slider cards section -->
             <SliderCards></SliderCards>
+            <!-- /slider cards section -->
+        </div>
+        <!-- statistic section -->
+        <div class="container statistic">
+
+            <StatisticsItem v-for="item in statisticItems" :item="item"></StatisticsItem>
 
         </div>
+        <!-- /statistic section -->
 
     </main>
 </template>
@@ -157,27 +189,6 @@ main {
             text-align: center;
             margin-top: 2em;
 
-            button {
-                padding: 20px 40px;
-
-                max-width: 60%;
-
-                margin: 1em 0;
-
-                border: none;
-
-                color: white;
-
-                border-radius: 8px;
-                background-color: #20AD96;
-
-                cursor: pointer;
-
-            }
-
-            button:hover {
-                background-color: #3F3A64;
-            }
         }
 
     }
@@ -212,6 +223,14 @@ main {
         background-color: #f7f7f7;
     }
 
+    .statistic {
+        display: flex;
+    }
+
+    .statistic:last-child {
+        border-right: 1px solid #f1ebe5;
+        ;
+    }
 
 }
 </style>

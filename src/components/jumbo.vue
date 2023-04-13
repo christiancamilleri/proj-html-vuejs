@@ -68,24 +68,6 @@ export default {
         display: flex;
         flex-direction: column;
 
-        button {
-            padding: 10px 20px;
-
-            max-width: 60%;
-
-            margin: 1em 0;
-
-            border: none;
-
-            color: white;
-            background-color: #20AD96;
-        }
-
-        button:hover {
-            background-color: #3F3A64;
-            cursor: pointer;
-        }
-
         a {
             color: #20AD96;
         }
