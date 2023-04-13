@@ -5,6 +5,7 @@ import CompanionItem from './CompanionItem.vue';
 import SliderCards from './SliderCards.vue';
 import StatisticsItem from './StatisticsItem.vue';
 import BlogsSection from './BlogsSection.vue';
+import NewsletterSection from './NewsletterSection.vue';
 
 import { store } from '../store.js';
 
@@ -103,6 +104,7 @@ export default {
         SliderCards,
         StatisticsItem,
         BlogsSection,
+        NewsletterSection,
     }
 }
 </script>
@@ -165,7 +167,15 @@ export default {
         </div>
         <!-- /statistic section -->
 
+        <!-- blog section -->
         <BlogsSection></BlogsSection>
+        <!-- /blog section -->
+
+        <!-- newsletter section -->
+        <NewsletterSection></NewsletterSection>
+        <!-- /newsletter section -->
+
+
 
     </main>
 </template>
