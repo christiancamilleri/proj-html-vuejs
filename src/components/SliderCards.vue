@@ -138,19 +138,14 @@ export default {
 
 .card-container {
     display: flex;
+    gap: 2em;
 
     margin-top: 3em;
 
-    gap: 2em;
-
-    padding: 2em;
-
     background-color: #f7f7f7;
-
 
     height: 100%;
     width: 100%;
-
 }
 
 #slider {
@@ -158,7 +153,7 @@ export default {
     gap: .5em;
     justify-content: center;
 
-    margin-top: 2em;
+    margin-top: 3em;
 
     i:hover {
         cursor: pointer;
