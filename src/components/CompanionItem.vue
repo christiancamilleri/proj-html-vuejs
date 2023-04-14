@@ -86,8 +86,10 @@ export default {
 
             #yt-btn {
                 position: absolute;
-                top: 44%;
-                right: 40%
+                top: 35%;
+                right: 40%;
+
+                z-index: 6;
             }
 
             #path1 {

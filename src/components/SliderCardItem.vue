@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .card {
     width: calc(100% / 3 - 2em / 3 * 2);
-    height: 300px;
+    height: 250px;
     padding: 2em;
 
     background-color: white;

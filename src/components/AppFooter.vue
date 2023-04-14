@@ -110,6 +110,8 @@ footer {
 
                 color: #b1b1b1;
             }
+
+
         }
 
         .list-1 {
@@ -121,11 +123,7 @@ footer {
             color: #b1b1b1;
         }
 
-        li:hover {
-            color: #20AD96;
 
-            cursor: pointer;
-        }
 
         .footer-right {
             display: flex;
@@ -150,6 +148,12 @@ footer {
                     padding: 0;
                     gap: 0 10px;
                 }
+
+                li:hover {
+                    color: #20AD96;
+
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -157,7 +161,7 @@ footer {
     #go-up {
         border-radius: 50%;
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         right: 0;
     }
 

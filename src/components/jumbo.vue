@@ -70,6 +70,7 @@ export default {
 
         a {
             color: #20AD96;
+            text-decoration: underline;
         }
 
     }
